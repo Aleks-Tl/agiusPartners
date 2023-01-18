@@ -1,9 +1,13 @@
 :root {
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
+  --font-family: "Montserrat", sans-serif;
+  --content-width: 1350px;
+  --content-width-sm: 1120px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-  --light-color: #fff;
+  --container-width-sm: calc(var(--content-width-sm) + (var(--container-offset) * 2));
+  --whiteColor: #ffffff;
+  --blackColor: #000000;
+  --accentColor: #b1862e;
 }
 
 /* stylelint-disable */ /* stylelint-disable */ /* stylelint-disable */
@@ -22,6 +26,41 @@
 }
 
 /* stylelint-disable */ /* stylelint-disable */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/../fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/../fonts/Montserrat-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/../fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/../fonts/OpenSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -45,6 +84,8 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
 }
 
 img {
@@ -106,6 +147,12 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+}
+
+.container-sm {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width-sm);
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
