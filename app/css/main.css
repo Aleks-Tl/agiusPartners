@@ -193,14 +193,10 @@ ul {
   position: relative;
 }
 
-body {
-  background-color: var(--blackColor);
-  height: 2000px;
-}
-
 .header {
   padding: 15px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(15, 11, 11, 0.3);
   position: fixed;
   top: 0;
   left: 0;
@@ -209,6 +205,7 @@ body {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  z-index: 100;
 }
 .header__container {
   display: -webkit-box;
@@ -498,7 +495,7 @@ body {
   }
 }
 .header.scroll {
-  background-color: rgba(43, 41, 41, 0.9);
+  background-color: rgba(15, 11, 11, 0.3);
   padding-top: 5px;
   padding-bottom: 0;
 }
@@ -510,5 +507,58 @@ body {
     padding-top: 5px;
     padding-bottom: 0;
   }
+}
+
+.main-slider-wrapper .swiper {
+  width: 100%;
+  height: 100vh;
+}
+.main-slider-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.main-slider-wrapper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.main-slider-wrapper .swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.main-slider-wrapper .swiper-pagination-vertical.swiper-pagination-bullets, .main-slider-wrapper .swiper-vertical > .swiper-pagination-bullets {
+  right: 60px;
+}
+.main-slider-wrapper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #aaaaaa;
+  opacity: 1;
+  margin-bottom: 18px !important;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+.main-slider-wrapper .swiper-pagination-bullet-active {
+  width: 14px;
+  height: 14px;
+  background-color: transparent !important;
+  border: 2px solid #AAAAAA;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
 }
 /*# sourceMappingURL=main.css.map */

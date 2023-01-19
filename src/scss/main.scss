@@ -5,22 +5,19 @@
 @import "settings";
 
 
-body {
-  background-color: var(--blackColor);
-  height: 2000px;
-}
-
 // HEADER START ========================================================================================================================================================
 
 .header {
   padding: 15px 0;
   border-bottom: 1px solid rgba(#ffffff, 0.2);
+  background-color: rgba(15, 11, 11, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   transition: all 0.3s ease 0s;
+  z-index: 100;
   // .header__container
 
   &__container {
@@ -207,7 +204,7 @@ body {
     &__line {}
   }
   &.scroll {
-    background-color: rgba(43, 41, 41, 0.9);
+    background-color: rgba(15, 11, 11, 0.3);
     padding-top: 5px;
     padding-bottom: 0;
     .nav {
@@ -226,9 +223,57 @@ body {
   }
 }
 
-
-
-
-
 // HEADER END ========================================================================================================================================================
+
+// MAIN SLIDER START ========================================================================================================================================================
+
+.main-slider-wrapper {
+  .swiper {
+    width: 100%;
+    height: 100vh;
+  }
+  .mySwiper {
+  }
+  .swiper-wrapper {
+  }
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
+    right: 60px;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #aaaaaa;
+    opacity: 1;
+    margin-bottom: 18px !important;
+    transition: all 0.2s ease 0s;
+  }
+  .swiper-pagination-bullet-active {
+    width: 14px;
+    height: 14px;
+    background-color: transparent !important;
+    border: 2px solid #AAAAAA;
+    transition: all 0.2s ease 0s;
+  }
+}
+
+
+
+// MAIN SLIDER END ========================================================================================================================================================
+
 
