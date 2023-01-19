@@ -5,3 +5,230 @@
 @import "settings";
 
 
+body {
+  background-color: var(--blackColor);
+  height: 2000px;
+}
+
+// HEADER START ========================================================================================================================================================
+
+.header {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(#ffffff, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  // .header__container
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1730px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  // .header__logo
+
+  &__logo {
+    position: relative;
+    z-index: 100;
+    @media (max-width: 1200px){
+        img {
+          width: 250px;
+        }
+    }
+    @media (max-width: 480px){
+        img {
+          width: 150px;
+        }
+    }
+  }
+
+  .nav {
+    > ul {
+      display: flex;
+      > li {
+        margin-right: 30px;
+        &:last-child {
+          margin-right: 0;
+        }
+        > a {
+          font-weight: 700;
+          line-height: 30px;
+          text-transform: uppercase;
+          color: var(--whiteColor);
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: var(--accentColor);
+          }
+        }
+      }
+      @media (max-width: 1200px){
+          > li {
+            margin-right: 15px;
+            > a {
+              font-size: 14px;
+            }
+          }
+      }
+      @media (max-width: 992px){
+          width: 100%;
+          height: 100%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          > li {
+            margin: 0;
+            margin-bottom: 15px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            > a {
+              font-size: 21px;
+            }
+          }
+      }
+      @media (max-width: 480px){
+          > li {
+            margin-bottom: 10px;
+            > a {
+              font-size: 16px;
+            }
+          }
+      }
+      @media (max-height: 480px){
+          > li {
+            margin-bottom: 5px;
+            > a {
+              font-size: 14px;
+              line-height: 18px;
+            }
+          }
+      }
+    }
+    // .nav__list
+
+    &__list {}
+
+    // .nav__item
+
+    &__item {}
+
+    // .nav__link
+
+    &__link {}
+
+    @media (max-width: 992px){
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--blackColor);
+      z-index: 99;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease 0s;
+      &.menu--active {
+        transform: translate(0%);
+      }
+    }
+    @media (max-width: 576px){
+        ul.social {
+          transform: scale(1);
+          position: absolute;
+          bottom: 15%;
+          left: 50%;
+          transform: translateX(-50%);
+          flex-direction: column;
+          max-width: max-content;
+          flex-direction: row;
+          height: 24px;
+          > li {
+            margin-right: 15px;
+            margin-bottom: 0;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+     }
+     @media (max-height: 480px){
+      ul.social {
+        bottom: 6%;
+      }
+     }
+  }
+
+  // .header__social
+
+   &__social {
+    > ul {
+      display: flex;
+      height: 24px;
+      > li {
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
+          width: 24px;
+          height: 24px;
+        }
+        > a {
+          transition: transform 0.3s ease 0s;
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          &:hover {
+            transform: translateY(-4px);
+          }
+        }
+      }
+      @media (max-width: 576px){
+        transform: scale(0);
+    }
+    }
+   }
+
+  .burger {
+    @include burger;
+    display: none;
+    // .burger__line
+    @media (max-width: 992px){
+      display: block;
+      position: relative;
+      z-index: 100;
+    }
+    &__line {}
+  }
+  &.scroll {
+    background-color: rgba(43, 41, 41, 0.9);
+    padding-top: 5px;
+    padding-bottom: 0;
+    .nav {
+      > ul {
+        > li {
+          > a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 576px){
+    padding-top: 5px;
+    padding-bottom: 0;
+  }
+}
+
+
+
+
+
+// HEADER END ========================================================================================================================================================
+
