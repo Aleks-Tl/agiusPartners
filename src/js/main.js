@@ -42,13 +42,49 @@ import './_components';
 
 // Main vertical swiper ========================================================================================================================================================
 
-const swiperVertical = new Swiper(".main-slider", {
-  direction: "vertical",
-  slidesPerView: 1,
-  mousewheel: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  speed: 800,
-});
+
+const breakpoint = window.matchMedia('(max-width:1200px)');
+
+    // keep track of swiper instances to destroy later
+    let mainSwiper;
+    const breakpointChecker = function () {
+
+      // if larger viewport and multi-row layout needed
+      if (breakpoint.matches === true) {
+        // clean up old instances and inline styles when available
+
+        mainSwiper.destroy(true, true);
+
+        // or/and do nothing
+        // else if a small viewport and single column layout needed
+      } else if (breakpoint.matches === false) {
+        // fire small viewport version of swiper
+        return enableSwiper();
+
+      }
+
+    };
+    const enableSwiper = function () {
+
+        mainSwiper = new Swiper('.main-slider', {
+        direction: "vertical",
+        slidesPerView: 1,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        speed: 800,
+        navigation: {
+          nextEl: '.hero__click-down',
+        },
+      });
+    }
+
+
+    breakpoint.addListener(breakpointChecker);
+
+    // kickstart
+    breakpointChecker();
+
+
