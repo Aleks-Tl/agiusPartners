@@ -257,6 +257,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media (max-width: 1500px){
+        right: 10px !important;
+    }
   }
   .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
     right: 60px;
@@ -500,10 +503,139 @@
   }
 }
 
-
-
-
-
-
 // SECTION HERO END ========================================================================================================================================================
+
+// SECTION VACANCY START ========================================================================================================================================================
+
+.vacancy {
+    height: 100%;
+		// .vacancy__wrap
+    .container {
+      height: 100%;
+    }
+		&__wrap {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+		// .vacancy__suptitle
+
+		&__suptitle {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--accentColor);
+    }
+
+		// .vacancy__title
+
+		&__title {
+      margin-top: 10px;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 50px;
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--blackColor);
+    }
+
+		// .vacancy__items
+
+		&__items {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+
+		// .vacancy__item
+
+		&__item {
+      box-sizing: border-box;
+      flex-basis: calc(50% - 12px);
+      background-color: var(--whiteColor);
+      border: 1px solid #DDDDDD;
+      padding: 30px;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto auto;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        filter: drop-shadow(0px 5px 30px rgba(0, 0, 0, 0.1));
+      }
+    }
+
+		// .vacancy__name
+
+		&__name {
+      grid-column: span 8;
+      max-width: 285px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      color: var(--blackColor);
+
+    }
+
+		// .vacancy__link
+
+		&__link {
+      padding: 10px 25px;
+      font-size: 14px;
+      line-height: 20px;
+      grid-column: span 4;
+      align-self: flex-start;
+    }
+
+		// .vacancy__list
+
+		&__list {
+      grid-column: span 12;
+      display: flex;
+      column-gap: 30px;
+      > li {
+        &:last-child {
+          padding-left: 15px;
+          background-image: url('../img/location.png');
+          background-size: 11px 15px;
+          background-repeat: no-repeat;
+          background-position: left center;
+        }
+        > a {
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 20px;
+          text-transform: uppercase;
+          color: var(--accentColor);
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+		// .vacancy__btn
+
+		&__btn {
+      margin-top: 40px;
+      padding: 15px 55px;
+    }
+}
+
+
+
+
+
+// SECTION VACANCY END ========================================================================================================================================================
+
+
 

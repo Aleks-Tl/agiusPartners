@@ -1,7 +1,7 @@
 :root {
   --font-family: "Montserrat", sans-serif;
-  --content-width: 1350px;
-  --content-width-sm: 1120px;
+  --content-width: 1320px;
+  --content-width-sm: 1090px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --container-width-sm: calc(var(--content-width-sm) + (var(--container-offset) * 2));
@@ -233,6 +233,25 @@ ul {
     padding: 8px 0;
     font-size: 14px;
   }
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--whiteColor);
+  padding: 15px 0;
+  border: 2px solid var(--blackColor);
+  background-color: var(--blackColor);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover {
+  background-color: var(--whiteColor);
+  border: 2px solid var(--accentColor);
+  color: var(--blackColor);
 }
 
 .header {
@@ -591,6 +610,11 @@ ul {
   -ms-flex-pack: center;
   justify-content: center;
 }
+@media (max-width: 1500px) {
+  .main-slider-wrapper .swiper-pagination {
+    right: 10px !important;
+  }
+}
 .main-slider-wrapper .swiper-pagination-vertical.swiper-pagination-bullets, .main-slider-wrapper .swiper-vertical > .swiper-pagination-bullets {
   right: 60px;
 }
@@ -857,5 +881,130 @@ ul {
     -ms-transform: translateX(0%);
     transform: translateX(0%);
   }
+}
+
+.vacancy {
+  height: 100%;
+}
+.vacancy .container {
+  height: 100%;
+}
+.vacancy__wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.vacancy__suptitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accentColor);
+}
+.vacancy__title {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--blackColor);
+}
+.vacancy__items {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.vacancy__item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-flex-preferred-size: calc(50% - 12px);
+  flex-basis: calc(50% - 12px);
+  background-color: var(--whiteColor);
+  border: 1px solid #DDDDDD;
+  padding: 30px;
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  -ms-grid-columns: (1fr)[12];
+  grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.vacancy__item:hover {
+  -webkit-filter: drop-shadow(0px 5px 30px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0px 5px 30px rgba(0, 0, 0, 0.1));
+}
+.vacancy__name {
+  -ms-grid-column-span: 8;
+  grid-column: span 8;
+  max-width: 285px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: var(--blackColor);
+}
+.vacancy__link {
+  padding: 10px 25px;
+  font-size: 14px;
+  line-height: 20px;
+  -ms-grid-column-span: 4;
+  grid-column: span 4;
+  align-self: flex-start;
+}
+.vacancy__list {
+  -ms-grid-column-span: 12;
+  grid-column: span 12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+}
+.vacancy__list > li:last-child {
+  padding-left: 15px;
+  background-image: url("../img/location.png");
+  background-size: 11px 15px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.vacancy__list > li > a {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--accentColor);
+}
+.vacancy__list > li > a:hover {
+  text-decoration: underline;
+}
+.vacancy__btn {
+  margin-top: 40px;
+  padding: 15px 55px;
 }
 /*# sourceMappingURL=main.css.map */

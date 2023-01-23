@@ -165,3 +165,25 @@ ul {
       font-size: 14px;
   }
 }
+
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--whiteColor);
+  padding: 15px 0;
+  border: 2px solid var(--blackColor);
+  background-color: var(--blackColor);
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background-color: var(--whiteColor);
+    border: 2px solid var(--accentColor);
+    color: var(--blackColor);
+  }
+}
+.home-suptitle {
+}
+.home-title {
+}
