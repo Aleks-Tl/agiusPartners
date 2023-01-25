@@ -184,6 +184,30 @@ ul {
   }
 }
 .home-suptitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accentColor);
+  @media (max-width: 768px){
+      font-size: 16px;
+      line-height: 26px;
+  }
 }
 .home-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--blackColor);
+  @media (max-width: 768px){
+      font-size: 25px;
+      line-height: 36px;
+  }
+  @media (max-width: 480px){
+      font-size: 22px;
+      line-height: 30px;
+  }
 }
